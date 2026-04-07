@@ -1,5 +1,12 @@
 #include "Contact.hpp"
 
+Contact::Contact():
+	firstName (""),
+	lastName (""),
+	nickname (""),
+	phoneNumber (""),
+	darkestSecret ("") {}
+
 Contact::Contact(const std::string& firstName,
             const std::string& lastName,
             const std::string& nickname,
