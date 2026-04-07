@@ -26,7 +26,7 @@ int     getOption()
 	return (option);
 }
 
-void	selectOption(PhoneBook pb, int option)
+void	selectOption(PhoneBook& pb, int option)
 {
 	if (option == 1)
 		pb.addContact();

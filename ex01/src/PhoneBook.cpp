@@ -42,7 +42,7 @@ void PhoneBook::addContact(){
 							phoneNumber,
 							darkestSecret
 						);
-	PhoneBook::index++; // verificar por que nao está incrementando
+	PhoneBook::index++;
 	std::cout << "---------------------------" << std::endl;
 	std::cout << "----- Contact added! ------" << std::endl;
 	std::cout << std::endl;
@@ -53,13 +53,12 @@ void PhoneBook::searchContact(){
 	std::cout << "_________________ PHONEBOOK _________________" << std::endl;
 	std::cout << "|          |          |          |          |" << std::endl;
 	std::cout << "|INDEX     |NAME      |LAST NAME |NICKNAME  |" << std::endl;	
-	std::cout << index << std::endl;
 	for (int i = 0; i < index; i++)
 	{
 		std::cout << "|" << formatResult(toString(i)) << "|";
 		std::cout << formatResult(contacts[i].getFirstName()) << "|";
 		std::cout << formatResult(contacts[i].getLastName()) << "|";
-		std::cout << formatResult(contacts[i].getNickname()) << "|";
+		std::cout << formatResult(contacts[i].getNickname()) << "|" << std::endl;
 	}
 	std::cout << "|__________|__________|__________|__________|" << std::endl;
 }
