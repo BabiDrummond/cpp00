@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 
 void    megaphone(int argc, char **argv)
 {
@@ -9,10 +10,7 @@ void    megaphone(int argc, char **argv)
     {
         word = argv[i];
         for (size_t j = 0; j < word.length(); j++)
-        {
-            if (word[j] >= 'a' && word[j] <= 'z')
-                word[j] -= 32;
-        }
+            word[j] = std::toupper(word[j]);
         std::cout << word;
     }
     std::cout << std::endl;
